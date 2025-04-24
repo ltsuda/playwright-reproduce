@@ -17,7 +17,7 @@ test('locator "form" works', async ({ page }) => {
 test('getByLabel without any attribute fails', async ({ page }) => {
   await page.goto('https://semantic-ui.com/collections/form.html');
 
-  await expect(page.getByLabel('First Name')).toBeVisible()
+  await expect(page.getByLabel('First Name').first()).toBeVisible()
 });
 
 test('getByText works', async ({ page }) => {
